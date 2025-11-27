@@ -1,6 +1,6 @@
 const passedHtml = true;
 const passedCss = true;
-let message = ''
+let message = '';
 if (passedHtml && passedCss){
     message = 'Siz kursni boshlashingiz mumkin !'
 }
@@ -10,5 +10,7 @@ else if (passedHtml || passedCss) {
 else {
     message = 'Iltimos bootstrap ni boshlashdan oldin ikkita kursni tugating !'
 }
+console.log(message);
+
 
 
