@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Calculator</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Roboto", sans-serif;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+      }
+
+      .calculator {
+        background: #1e1e2f;
+        padding: 30px;
+        border-radius: 25px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+        width: 350px;
+      }
+
+      .display {
+        background: #2c2c3e;
+        color: #fff;
+        font-size: 2.2rem;
+        text-align: right;
+        padding: 25px 20px;
+        border-radius: 20px;
+        margin-bottom: 25px;
+        overflow-x: auto;
+      }
+
+      .buttons {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+      }
+
+      button {
+        padding: 22px;
+        font-size: 1.4rem;
+        border: none;
+        border-radius: 15px;
+        background: #3a3a4f;
+        color: #fff;
+        cursor: pointer;
+        transition: all 0.2s;
+        box-shadow: 0 5px #2c2c3e;
+      }
+
+      button:active {
+        transform: translateY(3px);
+        box-shadow: 0 2px #2c2c3e;
+      }
+
+      button.operator {
+        background: #ff9500;
+        color: #fff;
+      }
+
+      button.operator:active {
+        background: #e08900;
+      }
+
+      button.equal {
+        background: #28a745;
+        grid-column: 3 / 5;
+        grid-row: 5 / span 2;
+        height: 100%;
+      }
+
+      button.equal:active {
+        background: #218838;
+      }
+
+      button.clear {
+        background: #dc3545;
+      }
+
+      button.clear:active {
+        background: #c82333;
+      }
+
+      button.zero {
+        grid-column: 1 / span 2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="calculator">
+      <div class="display" id="display">0</div>
+      <div class="buttons">
+        <button class="clear">C</button>
+        <button class="operator">/</button>
+        <button class="operator">*</button>
+        <button class="operator">-</button>
+
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button class="operator">+</button>
+
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+
+        <button>.</button>
+        <button>1</button>
+        <button>2</button>
+
+        <button>3</button>
+        <button>0</button>
+        <button class="equal">=</button>
+      </div>
+    </div>
+    <script src="/Javascript/calculator.js"></script>
+  </body>
+</html>
